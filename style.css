@@ -1,0 +1,453 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+#bootScreen {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to right, #134e4a, #0f766e, #0d3b3b);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: sans-serif;
+  font-size: 2em;
+  z-index: 9999;
+  animation: fadeOut 2s ease-out forwards;
+  animation-delay: 3s;
+}
+
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+
+
+
+
+   body {
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      background-size: cover;
+      background-position: center;
+      transition: background-image 0.5s ease;
+      background-image: url(https://images.unsplash.com/photo-1470770841072-f978cf4d019e?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D);
+    }
+
+    .btn {
+      position: absolute;
+      top: 20px;
+      left: 85%;
+      padding: 10px 20px;
+      font-size: 16px;
+      background-color: rgb(55, 132, 226);
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+      color: rgb(255, 255, 255);
+    }
+
+
+.Main-os {
+    position: relative; 
+    height: 100vh;
+    overflow: hidden;
+}
+
+.notepad {
+    padding: 10px;
+    width: 50px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-notepad {
+    background: none;
+    border: none;
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+.btn-notepad2 {
+    background: none;
+    border: none;
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+.browser-btn{
+    background: none;
+    border: none;
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    padding: 10px;
+    transition: ease 0.3s;
+}
+.calc-btn{
+    background: none;
+    border: none;
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+.calc-btn2{
+    background: none;
+    border: none;
+    color: rgb(30, 30, 30);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+
+
+
+
+.calc-btn:hover {
+    transform: scale(1.1);
+}
+.btn-notepad:hover {
+    transform: scale(1.1);
+}
+
+.browser-btn:hover{
+ transform: scale(1.1);
+}
+
+
+.clock {
+    padding: 10px;
+    width: 50px;
+    margin-left: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-clock {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+.btn-clock2 {
+    background: none;
+    border: none;
+    color: rgb(0, 0, 0);
+    cursor: pointer;
+    padding: 5px;
+    transition: ease 0.3s;
+}
+
+.btn-clock:hover {
+    transform: scale(1.1);
+}
+
+.note-win {
+    position: absolute;
+    height: 650px;
+    width: 1200px;
+    color: white;
+    display: block;
+    left: 350px;
+    top: 10px;
+    display: none;
+    cursor: move;
+}
+
+.note-win .bar {
+    width: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+
+.note-win .bar span {
+
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.note-win textarea {
+    height: 640px;
+    width: 1200px;
+    background-color: wheat;
+    color: black;
+    font-weight: 400;
+    font-size: 22px;
+    resize: none;
+}
+
+.note-fun {
+    color: white;
+    background-color: rgb(63, 63, 232);
+    border: none;
+    width: 70px;
+    height: 20px;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-left: 5px;
+    margin-top: 5px;
+
+}
+
+.note-fun:hover {
+    transform: scale(1.1);
+}
+
+
+
+.clock-win {
+    position: absolute;
+    height: 650px;
+    width: 1200px;
+    color: white;
+    background-color: wheat;
+    display: block;
+   left: 400px;
+    top: 10px;
+    display: none;
+    cursor: move;
+}
+.calc-win {
+    position: absolute;
+    height: 500px;
+    width: 350px;
+    color: white;
+    background-color: wheat;
+    display: block;
+    left: 400px;
+    top: 10px;
+    display: none;
+  font-family: sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.clock-win .bar {
+    width: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+.calc-win .bar {
+    width: 100%;
+    background-color: white;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    font-weight: 800;
+}
+
+.clock-win .bar span {
+
+    font-size: 20px;
+    cursor: pointer;
+
+}
+.calc-win .bar span {
+
+    font-size: 20px;
+    cursor: pointer;
+
+}
+
+.clock-area {
+    height: 650px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+
+.clac-area {
+    height: 650px;
+    width: 1200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.clockContant {
+    font-size: 80px;
+    font-family: 'Courier New', monospace;
+    font-weight: bolder;
+    color: #fff;
+    background-color: #222;
+    padding: 20px;
+    width: fit-content;
+    border-radius: 10px;
+}
+
+.date {
+    font-size: 30px;
+    margin-top: 20px;
+    font-weight: 900;
+    color: #000000;
+}
+
+
+
+.browser-window {
+  position: absolute;
+  top: 100px;
+  left: 100px;
+  width: 1100px;
+  height: 500px;
+  border: 2px solid #444;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 0 10px rgba(0,0,0,0.4);
+  border-radius: 8px;
+}
+
+.browser-header {
+  background: #2e2e2e;
+  color: white;
+  padding: 5px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+}
+
+.browser-header input {
+  flex: 1;
+  padding: 5px;
+  border-radius: 4px;
+  border: none;
+}
+
+iframe {
+  flex: 1;
+  width: 100%;
+  border: none;
+}
+
+
+
+.taskdiv {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  z-index: 999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+
+
+
+.taskbar {
+  background-color: #1e1e1e;
+  color: white;
+  width: 80%;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 10px;
+  font-family: sans-serif;
+  z-index: 999;
+  border-radius: 20px;
+}
+
+.start-menu {
+  font-weight: bold;
+  cursor: pointer;
+  color: black;
+}
+
+.apps span {
+  margin: 0 8px;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.clock {
+  font-family: monospace;
+  font-size: 18px;
+  color: black;
+}
+
+
+
+.calculator {
+  background-color: #111;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px #000;
+}
+
+#display {
+  width: 95%;
+  height: 60px;
+  font-size: 24px;
+  margin-bottom: 20px;
+  text-align: right;
+  padding: 10px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+}
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 60px);
+  gap: 10px;
+}
+
+.btn-calc {
+  height: 60px;
+  font-size: 20px;
+  background-color: #333;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: #555;
+}
+
+.equal {
+  grid-column: span 2;
+  background-color: #ff9500;
+  color: #fff;
+}
+
+.equal:hover {
+  background-color: #e08600;
+}
+
+
+

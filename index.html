@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MasterOS</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div id="bootScreen">
+        <h1> OS Loading...</h1>
+        <p>Please wait</p>
+    </div>
+    <div class="Main-os">
+
+        <button class="btn" onclick="changeWallpaper()">Change Wallpaper</button>
+
+        <div class="icons">
+
+            <div class="notepad">
+                <button class="btn-notepad">
+                    <h1>📝</h1>
+                    <h3>Notepad</h3>
+                </button>
+            </div>
+            <div class="clock">
+                <button class="btn-clock">
+                    <h1>⏰</h1>
+                    <h3>Clock</h3>
+                </button>
+            </div>
+
+            <div class="browser">
+            <button onclick="openBrowser()" class="browser-btn">
+                <h1>🌐</h1>
+                <h3>Browser</h3>
+            </button>
+            </div>
+
+
+            <div class="Calc">
+            <button class="calc-btn">
+                <h1>🧮</h1>
+                <h3>Calculator</h3>
+            </button>
+            </div>
+
+        </div>
+
+
+        <div class="note-win">
+            <div class="bar"> 🔴🔵🟢 Notepad<span class="cancel">❌</span></div>
+            <div class="write">
+                <textarea id="myTextarea" rows="6" cols="40"></textarea><br>
+                <button onclick="saveData()" class="note-fun">Save</button>
+                <button onclick="loadData()" class="note-fun">Load</button>
+                <button onclick="clearData()" class="note-fun">Clear</button>
+            </div>
+        </div>
+
+        <div class="clock-win">
+            <div class="bar"> 🔴🔵🟢 Clock<span class="cancel-clock">❌</span></div>
+            <div class="clock-area">
+                <div id="clock" class="clockContant">00:00:00</div>
+                <div id="date" class="date">January 1, 1970</div>
+            </div>  
+        </div>
+
+
+        <div class="browser-window" id="browserWin" style="display: none;">
+            <div class="browser-header">
+                <input type="text" id="urlInput" placeholder="Enter URL and hit Enter" />
+                <button onclick="closeBrowser()">❌</button>
+            </div>
+            <iframe id="browserFrame" src="" frameborder="0"></iframe>
+        </div>
+
+
+         <div class="calc-win">
+            <div class="bar"> 🔴🔵🟢 Calculator<span class="cancel-calc">❌</span></div>
+
+             <div class="calculator">
+    <input type="text" id="display" readonly />
+    <div class="buttons">
+      <button class="btn-calc" onclick="clearDisplay()">C</button>
+      <button class="btn-calc" onclick="deleteLast()">DEL</button>
+      <button class="btn-calc" onclick="append('%')">%</button>
+      <button class="btn-calc" onclick="append('/')">/</button>
+
+      <button class="btn-calc" onclick="append('7')">7</button>
+      <button class="btn-calc" onclick="append('8')">8</button>
+      <button class="btn-calc" onclick="append('9')">9</button>
+      <button class="btn-calc" onclick="append('*')">*</button>
+
+      <button class="btn-calc" onclick="append('4')">4</button>
+      <button class="btn-calc" onclick="append('5')">5</button>
+      <button class="btn-calc" onclick="append('6')">6</button>
+      <button class="btn-calc" onclick="append('-')">-</button>
+
+      <button class="btn-calc" onclick="append('1')">1</button>
+      <button class="btn-calc" onclick="append('2')">2</button>
+      <button class="btn-calc" onclick="append('3')">3</button>
+      <button class="btn-calc" onclick="append('+')">+</button>
+
+      <button class="btn-calc" onclick="append('0')">0</button>
+      <button class="btn-calc" onclick="append('.')">.</button>
+      <button class="equal" onclick="calculate()">=</button>
+    </div>
+  </div>
+            
+        </div>
+        
+
+
+
+    </div>
+
+
+    <div class="taskdiv">
+        <div class="taskbar">
+            <div class="start-menu">🟢 Start</div>
+            <div class="apps">
+                <button class="btn-notepad2">
+                    <h1>📝</h1>
+                </button>
+                <button class="btn-clock2">
+                    <h1>⏰</h1>
+                </button>
+                <button onclick="openBrowser()" class="btn-notepad2"><h1>🌐</h1></button>
+                  <button class="calc-btn2">
+                <h1>🧮</h1>
+                   </button>
+
+
+            </div>
+            <div class="clock" id="taskbar-clock">00:00:00</div>
+        </div>
+    </div>
+
+</body>
+<script src="index.js"></script>
+
+</html>
